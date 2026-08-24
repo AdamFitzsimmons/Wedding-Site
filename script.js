@@ -15,8 +15,8 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 // ---------- countdown ----------
-// EDIT THIS: set to your actual ceremony date/time.
-const WEDDING_DATE = new Date('2027-09-18T15:00:00+10:00');
+// EDIT THIS: confirm the exact ceremony start time.
+const WEDDING_DATE = new Date('2027-09-04T15:00:00+10:00');
 
 function updateCountdown() {
   const now = new Date();
@@ -52,5 +52,4 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 // ---------- RSVP link ----------
-// EDIT THIS: paste your Google Form URL here.
-document.getElementById('rsvpLink').href = 'https://forms.gle/REPLACE-WITH-YOUR-FORM-ID';
+document.getElementById('rsvpLink').href = 'https://docs.google.com/forms/d/18l1d6wua28LdncbXHQjSbFAgpEn0w9txTNY2BFQyy1Y/viewform';

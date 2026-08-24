@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[Partner One] & [Partner Two] — September 2027</title>
+<title>Adam & Evelina — September 2027</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,19 +11,9 @@
 </head>
 <body>
 
-<!-- ===================================================== -->
-<!-- Recurring arc/sun motif (Sol Gardens signature element) -->
-<!-- ===================================================== -->
-<template id="arc-motif">
-  <svg class="arc" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M10 55 A90 90 0 0 1 190 55" stroke="currentColor" stroke-width="1.5"/>
-    <circle cx="100" cy="55" r="3" fill="currentColor"/>
-  </svg>
-</template>
-
 <header class="nav">
   <div class="nav__inner">
-    <span class="nav__mark">S&nbsp;+&nbsp;G</span>
+    <span class="nav__mark">A&nbsp;+&nbsp;E</span>
     <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -42,13 +32,9 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <p class="hero__eyebrow">We're getting married</p>
-    <h1 class="hero__names">[Partner&nbsp;One] <span class="hero__amp">&amp;</span> [Partner&nbsp;Two]</h1>
-    <svg class="arc arc--hero" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M10 55 A90 90 0 0 1 190 55" stroke="currentColor" stroke-width="1.5"/>
-      <circle cx="100" cy="55" r="3" fill="currentColor"/>
-    </svg>
-    <p class="hero__date">Saturday, [Day] September 2027</p>
-    <p class="hero__venue">Sol Gardens &middot; Gold Coast, Queensland</p>
+    <h1 class="hero__names">Adam <span class="hero__amp">&amp;</span> Evelina</h1>
+    <p class="hero__date">Saturday, 4 September 2027</p>
+    <p class="hero__venue">Sol Gardens &middot; Currumbin Valley, Queensland</p>
 
     <div class="countdown" id="countdown" aria-live="polite">
       <div class="countdown__unit"><span id="cd-days">–</span><small>days</small></div>
@@ -60,6 +46,22 @@
     <a href="#rsvp" class="button button--ghost hero__cta">RSVP</a>
   </section>
 
+  <!-- QUICK FACTS -->
+  <section class="quickfacts" aria-label="Key details">
+    <div class="quickfacts__item">
+      <span class="quickfacts__label">When</span>
+      <span class="quickfacts__value">4 September 2027</span>
+    </div>
+    <div class="quickfacts__item">
+      <span class="quickfacts__label">Where</span>
+      <span class="quickfacts__value">Sol Gardens, Currumbin Valley</span>
+    </div>
+    <div class="quickfacts__item">
+      <span class="quickfacts__label">Attire</span>
+      <span class="quickfacts__value">Colourful, semi-formal</span>
+    </div>
+  </section>
+
   <!-- DETAILS -->
   <section class="section" id="details">
     <p class="section__eyebrow">The day</p>
@@ -69,22 +71,31 @@
       <div class="card">
         <h3>Ceremony</h3>
         <p class="card__time">[3:00&nbsp;PM]</p>
-        <p>Sol Gardens<br>[Address line, Gold Coast QLD]</p>
-        <p class="card__note">Arrive 15 minutes early — parking fills up fast on weekends.</p>
+        <p>Sol Gardens<br>10 Bains Rd, Currumbin Valley QLD 4223</p>
+        <p class="card__note">Free parking is available on site.</p>
       </div>
       <div class="card">
         <h3>Reception</h3>
         <p class="card__time">[5:30&nbsp;PM]</p>
-        <p>Sol Gardens<br>[Same venue / different room]</p>
+        <p>Sol Gardens<br>10 Bains Rd, Currumbin Valley QLD 4223</p>
         <p class="card__note">Canapés, dinner, and dancing until late.</p>
       </div>
     </div>
 
     <div class="dress-code">
       <h3>What to wear</h3>
-      <p>[Garden formal — think light fabrics and flat-friendly shoes; the reception lawn can be soft underfoot.]</p>
+      <p>Colourful, semi-formal — think garden party rather than black tie. Bold colours and prints are warmly encouraged. Light fabrics and flat-friendly shoes recommended; the reception lawn can be soft underfoot.</p>
     </div>
   </section>
+
+  <div class="divider" aria-hidden="true">
+    <span class="divider__line"></span>
+    <svg class="divider__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 34 C10 30 6 18 12 8 C16 14 20 14 20 8 C20 14 24 14 28 8 C34 18 30 30 20 34 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M20 34 L20 12" stroke="currentColor" stroke-width="1.2"/>
+    </svg>
+    <span class="divider__line"></span>
+  </div>
 
   <!-- TRAVEL -->
   <section class="section section--tinted" id="travel">
@@ -98,7 +109,7 @@
       </div>
       <div class="card card--plain">
         <h3>Where to stay</h3>
-        <p>We've held a small block of rooms at [Hotel Name] nearby. Mention "[Partner One] &amp; [Partner Two]" when booking for the group rate.</p>
+        <p>We've held a small block of rooms at [Hotel Name] nearby. Mention "Adam &amp; Evelina" when booking for the group rate.</p>
       </div>
       <div class="card card--plain">
         <h3>Getting around</h3>
@@ -106,6 +117,15 @@
       </div>
     </div>
   </section>
+
+  <div class="divider" aria-hidden="true">
+    <span class="divider__line"></span>
+    <svg class="divider__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 34 C10 30 6 18 12 8 C16 14 20 14 20 8 C20 14 24 14 28 8 C34 18 30 30 20 34 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M20 34 L20 12" stroke="currentColor" stroke-width="1.2"/>
+    </svg>
+    <span class="divider__line"></span>
+  </div>
 
   <!-- RSVP -->
   <section class="section section--dark" id="rsvp">
@@ -116,6 +136,15 @@
     <p class="rsvp__note">Trouble with the form? Reach us at <a href="mailto:[email address]">[email address]</a>.</p>
   </section>
 
+  <div class="divider" aria-hidden="true">
+    <span class="divider__line"></span>
+    <svg class="divider__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 34 C10 30 6 18 12 8 C16 14 20 14 20 8 C20 14 24 14 28 8 C34 18 30 30 20 34 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M20 34 L20 12" stroke="currentColor" stroke-width="1.2"/>
+    </svg>
+    <span class="divider__line"></span>
+  </div>
+
   <!-- REGISTRY -->
   <section class="section" id="registry">
     <p class="section__eyebrow">If you'd like to</p>
@@ -124,6 +153,15 @@
     <a href="#" class="button button--ghost">View Registry</a>
   </section>
 
+  <div class="divider" aria-hidden="true">
+    <span class="divider__line"></span>
+    <svg class="divider__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 34 C10 30 6 18 12 8 C16 14 20 14 20 8 C20 14 24 14 28 8 C34 18 30 30 20 34 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M20 34 L20 12" stroke="currentColor" stroke-width="1.2"/>
+    </svg>
+    <span class="divider__line"></span>
+  </div>
+
   <!-- FAQ -->
   <section class="section section--tinted" id="faq">
     <p class="section__eyebrow">Good to know</p>
@@ -131,20 +169,12 @@
 
     <div class="faq">
       <details>
-        <summary>Are kids welcome?</summary>
-        <p>[Your answer — e.g. "We love your little ones, but the reception is an adults-only evening."]</p>
-      </details>
-      <details>
         <summary>Is there parking on site?</summary>
-        <p>[Your answer here.]</p>
+        <p>Yes — Sol Gardens has free on-site parking for guests.</p>
       </details>
       <details>
         <summary>What's the weather like in September?</summary>
         <p>Gold Coast spring — usually mild and sunny, low 20s°C. [Adjust if you'd like.]</p>
-      </details>
-      <details>
-        <summary>Can I bring a plus one?</summary>
-        <p>[Your answer — refer guests to check their invitation wording.]</p>
       </details>
     </div>
   </section>
@@ -152,11 +182,11 @@
 </main>
 
 <footer class="footer">
-  <svg class="arc" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M10 55 A90 90 0 0 1 190 55" stroke="currentColor" stroke-width="1.5"/>
-    <circle cx="100" cy="55" r="3" fill="currentColor"/>
+  <svg class="footer__mark divider__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M20 34 C10 30 6 18 12 8 C16 14 20 14 20 8 C20 14 24 14 28 8 C34 18 30 30 20 34 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M20 34 L20 12" stroke="currentColor" stroke-width="1.2"/>
   </svg>
-  <p>[Partner One] &amp; [Partner Two] &middot; Sol Gardens, Gold Coast &middot; September 2027</p>
+  <p>Adam &amp; Evelina &middot; Sol Gardens, Currumbin Valley &middot; September 2027</p>
 </footer>
 
 <script src="script.js"></script>
