@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Partner One] & [Partner Two] — September 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================================================== -->
+<!-- Recurring arc/sun motif (Sol Gardens signature element) -->
+<!-- ===================================================== -->
+<template id="arc-motif">
+  <svg class="arc" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M10 55 A90 90 0 0 1 190 55" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="100" cy="55" r="3" fill="currentColor"/>
+  </svg>
+</template>
+
+<header class="nav">
+  <div class="nav__inner">
+    <span class="nav__mark">S&nbsp;+&nbsp;G</span>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#details">Details</a>
+      <a href="#travel">Travel</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#registry">Registry</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <p class="hero__eyebrow">We're getting married</p>
+    <h1 class="hero__names">[Partner&nbsp;One] <span class="hero__amp">&amp;</span> [Partner&nbsp;Two]</h1>
+    <svg class="arc arc--hero" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 55 A90 90 0 0 1 190 55" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="100" cy="55" r="3" fill="currentColor"/>
+    </svg>
+    <p class="hero__date">Saturday, [Day] September 2027</p>
+    <p class="hero__venue">Sol Gardens &middot; Gold Coast, Queensland</p>
+
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div class="countdown__unit"><span id="cd-days">–</span><small>days</small></div>
+      <div class="countdown__unit"><span id="cd-hours">–</span><small>hours</small></div>
+      <div class="countdown__unit"><span id="cd-mins">–</span><small>mins</small></div>
+      <div class="countdown__unit"><span id="cd-secs">–</span><small>secs</small></div>
+    </div>
+
+    <a href="#rsvp" class="button button--ghost hero__cta">RSVP</a>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="section" id="details">
+    <p class="section__eyebrow">The day</p>
+    <h2 class="section__title">Details</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Ceremony</h3>
+        <p class="card__time">[3:00&nbsp;PM]</p>
+        <p>Sol Gardens<br>[Address line, Gold Coast QLD]</p>
+        <p class="card__note">Arrive 15 minutes early — parking fills up fast on weekends.</p>
+      </div>
+      <div class="card">
+        <h3>Reception</h3>
+        <p class="card__time">[5:30&nbsp;PM]</p>
+        <p>Sol Gardens<br>[Same venue / different room]</p>
+        <p class="card__note">Canapés, dinner, and dancing until late.</p>
+      </div>
+    </div>
+
+    <div class="dress-code">
+      <h3>What to wear</h3>
+      <p>[Garden formal — think light fabrics and flat-friendly shoes; the reception lawn can be soft underfoot.]</p>
+    </div>
+  </section>
+
+  <!-- TRAVEL -->
+  <section class="section section--tinted" id="travel">
+    <p class="section__eyebrow">Getting there</p>
+    <h2 class="section__title">Travel &amp; Stay</h2>
+
+    <div class="cards cards--three">
+      <div class="card card--plain">
+        <h3>Flying in</h3>
+        <p>Gold Coast Airport (OOL) is the closest, about [X] minutes from the venue. Brisbane Airport (BNE) is a longer but often cheaper option.</p>
+      </div>
+      <div class="card card--plain">
+        <h3>Where to stay</h3>
+        <p>We've held a small block of rooms at [Hotel Name] nearby. Mention "[Partner One] &amp; [Partner Two]" when booking for the group rate.</p>
+      </div>
+      <div class="card card--plain">
+        <h3>Getting around</h3>
+        <p>Rideshare is easy along the Gold Coast strip. We'll also arrange a shuttle between [Hotel Name] and the venue — details closer to the day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section section--dark" id="rsvp">
+    <p class="section__eyebrow">Before [RSVP&nbsp;date]</p>
+    <h2 class="section__title">RSVP</h2>
+    <p class="rsvp__copy">We'd love to know you're coming. Please reply by <strong>[RSVP deadline, e.g. 1 July 2027]</strong> so we can finalise numbers with the venue.</p>
+    <a href="#" class="button button--solid" id="rsvpLink">RSVP via Google Form</a>
+    <p class="rsvp__note">Trouble with the form? Reach us at <a href="mailto:[email address]">[email address]</a>.</p>
+  </section>
+
+  <!-- REGISTRY -->
+  <section class="section" id="registry">
+    <p class="section__eyebrow">If you'd like to</p>
+    <h2 class="section__title">Registry</h2>
+    <p class="registry__copy">Your presence is the present. If you'd still like to contribute, we've set up [a honeymoon fund / registry] here:</p>
+    <a href="#" class="button button--ghost">View Registry</a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--tinted" id="faq">
+    <p class="section__eyebrow">Good to know</p>
+    <h2 class="section__title">FAQ</h2>
+
+    <div class="faq">
+      <details>
+        <summary>Are kids welcome?</summary>
+        <p>[Your answer — e.g. "We love your little ones, but the reception is an adults-only evening."]</p>
+      </details>
+      <details>
+        <summary>Is there parking on site?</summary>
+        <p>[Your answer here.]</p>
+      </details>
+      <details>
+        <summary>What's the weather like in September?</summary>
+        <p>Gold Coast spring — usually mild and sunny, low 20s°C. [Adjust if you'd like.]</p>
+      </details>
+      <details>
+        <summary>Can I bring a plus one?</summary>
+        <p>[Your answer — refer guests to check their invitation wording.]</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <svg class="arc" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M10 55 A90 90 0 0 1 190 55" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="100" cy="55" r="3" fill="currentColor"/>
+  </svg>
+  <p>[Partner One] &amp; [Partner Two] &middot; Sol Gardens, Gold Coast &middot; September 2027</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

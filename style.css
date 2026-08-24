@@ -1,0 +1,306 @@
+/* =====================================================
+   Design tokens — Sol Gardens, Gold Coast, Sept 2027
+   ===================================================== */
+:root{
+  --sand:      #EDE7D8;   /* page background */
+  --cream:     #FBF9F4;   /* card / raised surface */
+  --ink:       #2B2B26;   /* body text */
+  --ocean:     #1F3B3A;   /* primary dark accent / dark section bg */
+  --gold:      #B8912B;   /* highlight accent, used sparingly */
+  --eucalyptus:#7C9473;   /* secondary accent, dividers, small text */
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 3rem;
+  --space-5: 5rem;
+
+  --max-w: 1080px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body{
+  margin:0;
+  background: var(--sand);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1,h2,h3{
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  color: var(--ocean);
+}
+
+a{ color: inherit; }
+
+/* ---------- signature arc motif ---------- */
+.arc{
+  width: 140px;
+  height: auto;
+  color: var(--gold);
+  display: block;
+  margin: var(--space-2) auto;
+}
+.arc--hero{ width: 200px; margin: var(--space-3) auto; }
+
+/* ---------- nav ---------- */
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(237,231,216,0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(43,43,38,0.08);
+}
+.nav__inner{
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__mark{
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  color: var(--ocean);
+  font-size: 1.1rem;
+}
+.nav__links{ display: flex; gap: var(--space-3); }
+.nav__links a{
+  text-decoration: none;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+.nav__links a:hover,
+.nav__links a:focus-visible{ color: var(--ocean); border-color: var(--gold); }
+
+.nav__toggle{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-1);
+}
+.nav__toggle span{
+  width: 22px; height: 2px; background: var(--ocean); display: block;
+}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-4) var(--space-3);
+}
+.hero__eyebrow{
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  color: var(--eucalyptus);
+  margin: 0 0 var(--space-2);
+}
+.hero__names{
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  line-height: 1.1;
+}
+.hero__amp{
+  font-style: italic;
+  color: var(--gold);
+  padding: 0 0.15em;
+}
+.hero__date{
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--ink);
+}
+.hero__venue{
+  margin: var(--space-1) 0 0;
+  color: var(--eucalyptus);
+  letter-spacing: 0.02em;
+}
+
+.countdown{
+  display: flex;
+  gap: var(--space-3);
+  margin: var(--space-4) 0 var(--space-3);
+}
+.countdown__unit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 54px;
+}
+.countdown__unit span{
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--ocean);
+}
+.countdown__unit small{
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.66rem;
+  color: var(--eucalyptus);
+}
+
+.hero__cta{ margin-top: var(--space-2); }
+
+/* ---------- buttons ---------- */
+.button{
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--font-body);
+  letter-spacing: 0.04em;
+  font-size: 0.92rem;
+  padding: 0.85em 2em;
+  border-radius: 999px;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+.button--ghost{
+  border: 1px solid var(--ocean);
+  color: var(--ocean);
+}
+.button--ghost:hover{ background: var(--ocean); color: var(--cream); }
+.button--solid{
+  background: var(--gold);
+  color: var(--cream);
+}
+.button--solid:hover{ transform: translateY(-2px); }
+
+/* ---------- sections ---------- */
+.section{
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-3);
+  text-align: center;
+}
+.section--tinted{ background: var(--cream); max-width: none; }
+.section--tinted > *{ max-width: var(--max-w); margin-left: auto; margin-right: auto; }
+.section--dark{
+  background: var(--ocean);
+  color: var(--cream);
+  max-width: none;
+}
+.section--dark > *{ max-width: var(--max-w); margin-left: auto; margin-right: auto; }
+.section--dark h2{ color: var(--cream); }
+.section--dark .section__eyebrow{ color: var(--gold); }
+
+.section__eyebrow{
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.76rem;
+  color: var(--eucalyptus);
+  margin: 0 0 var(--space-1);
+}
+.section__title{
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- cards ---------- */
+.cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  text-align: left;
+}
+.cards--three{ grid-template-columns: repeat(3, 1fr); }
+.card{
+  background: var(--cream);
+  border: 1px solid rgba(43,43,38,0.08);
+  border-radius: 4px;
+  padding: var(--space-3);
+}
+.card--plain{ background: var(--sand); }
+.card h3{ font-size: 1.2rem; margin-bottom: var(--space-1); }
+.card__time{ color: var(--gold); font-weight: 500; margin: 0 0 var(--space-1); }
+.card__note{ color: var(--eucalyptus); font-size: 0.88rem; margin-top: var(--space-2); }
+
+.dress-code{
+  margin-top: var(--space-4);
+  text-align: left;
+  border-top: 1px solid rgba(43,43,38,0.12);
+  padding-top: var(--space-3);
+}
+
+/* ---------- rsvp / registry ---------- */
+.rsvp__copy, .registry__copy{
+  max-width: 46ch;
+  margin: 0 auto var(--space-3);
+}
+.rsvp__note{
+  margin-top: var(--space-2);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.rsvp__note a{ text-decoration: underline; }
+
+/* ---------- faq ---------- */
+.faq{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.faq details{
+  background: var(--sand);
+  border-radius: 4px;
+  padding: var(--space-2) var(--space-3);
+}
+.faq summary{
+  cursor: pointer;
+  font-family: var(--font-display);
+  color: var(--ocean);
+  font-size: 1.05rem;
+}
+.faq p{ margin: var(--space-1) 0 0; color: var(--ink); }
+
+/* ---------- footer ---------- */
+.footer{
+  text-align: center;
+  padding: var(--space-4) var(--space-3) var(--space-5);
+  color: var(--eucalyptus);
+  font-size: 0.85rem;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 720px){
+  .nav__links{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--sand);
+    flex-direction: column;
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid rgba(43,43,38,0.08);
+  }
+  .nav__links.is-open{ display: flex; }
+  .nav__toggle{ display: flex; }
+
+  .cards, .cards--three{ grid-template-columns: 1fr; }
+  .countdown{ gap: var(--space-2); }
+}
