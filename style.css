@@ -49,17 +49,8 @@ h1,h2,h3{
 
 a{ color: inherit; }
 
-/* ---------- divider (signature leaf mark) ---------- */
-.divider{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  max-width: 320px;
-  margin: 0 auto;
-  padding: var(--space-4) var(--space-3) 0;
-}
-.divider__line{ flex: 1; height: 1px; background: rgba(32,36,28,0.16); }
+/* ---------- section divider (gold bar) + footer leaf mark ---------- */
+.gold-bar{ height: 3px; background: var(--gold); }
 .divider__mark{ width: 24px; height: auto; color: var(--gold); flex-shrink: 0; }
 
 /* ---------- nav ---------- */
@@ -248,7 +239,6 @@ a{ color: inherit; }
 .section--dark > *{ max-width: var(--max-w); margin-left: auto; margin-right: auto; }
 .section--dark h2{ color: var(--paper); }
 .section--dark .section__eyebrow{ color: var(--gold); }
-.section--dark .divider__line{ background: rgba(251,249,243,0.2); }
 
 .section__eyebrow{
   text-transform: uppercase;
