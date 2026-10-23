@@ -9,6 +9,7 @@
   --jungle:     #16311F;   /* dark accent / dark section bg / hero base */
   --gold:       #B8924A;   /* primary accent — warm brass */
   --sage:       #5C7A54;   /* secondary accent, dividers, small text */
+  --mint:       #F6FFFC;   /* hero background behind palm image */
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -121,25 +122,22 @@ a{ color: inherit; }
   justify-content: center;
   text-align: center;
   padding: var(--space-4) var(--space-3);
-  color: var(--paper);
+  color: var(--jungle);
   background:
-    radial-gradient(circle at 18% 22%, rgba(255,244,214,0.16), transparent 34%),
-    radial-gradient(circle at 80% 12%, rgba(255,244,214,0.10), transparent 30%),
-    radial-gradient(ellipse 85% 60% at 50% 0%, rgba(94,150,80,0.5), transparent 62%),
-    radial-gradient(ellipse 70% 55% at 50% 105%, rgba(0,0,0,0.35), transparent 70%),
-    linear-gradient(160deg, #0E2417 0%, #16311F 40%, #24512F 72%, #386B3D 100%);
+    radial-gradient(ellipse 48% 50% at 50% 52%, var(--mint) 38%, rgba(246,255,252,0) 100%),
+    var(--mint) url("images/hero-palm.jpg") center / cover no-repeat;
 }
 .hero__eyebrow{
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 0.78rem;
-  color: rgba(251,249,243,0.75);
+  color: var(--sage);
   margin: 0 0 var(--space-2);
 }
 .hero__names{
   font-size: clamp(2.4rem, 7vw, 4.6rem);
   line-height: 1.1;
-  color: var(--paper);
+  color: var(--jungle);
 }
 .hero__amp{
   font-style: italic;
@@ -149,11 +147,11 @@ a{ color: inherit; }
 .hero__date{
   font-size: 1.15rem;
   margin: 0;
-  color: var(--paper);
+  color: var(--jungle);
 }
 .hero__venue{
   margin: var(--space-1) 0 0;
-  color: rgba(251,249,243,0.75);
+  color: var(--ink);
   letter-spacing: 0.02em;
 }
 
@@ -171,7 +169,7 @@ a{ color: inherit; }
 .countdown__unit span{
   font-family: var(--font-display);
   font-size: 1.8rem;
-  color: var(--paper);
+  color: var(--jungle);
 }
 .countdown__unit small{
   text-transform: uppercase;
@@ -224,10 +222,10 @@ a{ color: inherit; }
 }
 .button--ghost:hover{ background: var(--jungle); color: var(--paper); }
 .hero .button--ghost{
-  border-color: var(--gold);
-  color: var(--paper);
+  border-color: var(--jungle);
+  color: var(--jungle);
 }
-.hero .button--ghost:hover{ background: var(--gold); color: var(--jungle); }
+.hero .button--ghost:hover{ background: var(--jungle); color: var(--paper); }
 .button--solid{
   background: var(--gold);
   color: var(--jungle);
